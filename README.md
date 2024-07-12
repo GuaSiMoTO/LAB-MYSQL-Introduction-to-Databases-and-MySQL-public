@@ -15,48 +15,65 @@ At Reboot Academy, we aim to equip you with practical skills in managing databas
 - Have MySQL installed.
 - Have MySQL Workbench installed or any other MySQL client.
 
-## Deliverables
-The goal of this lab is to design and interact with a MySQL database that meets the needs of a typical application.
+![image](https://github.com/user-attachments/assets/3714b7fb-fe11-4aa9-9e10-87afbb8367fa)
 
-Your goal is to:
-- Define a schema that adheres to the requirements of the application.
+### Story:
+You have been recruited by the Rebel Alliance as a data specialist. Your mission is to design and interact with a MySQL database that meets the needs of the Rebel operations. This database will store crucial intelligence about the Empire and the galaxy, helping the Rebellion strategize and execute their plans.
+
+### Objectives:
+- Define a schema that adheres to the operational requirements of the Rebel Alliance.
 - Implement the schema in MySQL.
-- Execute and capture the results of specific queries.
+- Execute and capture the results of specific queries to gather intelligence.
 
+### Deliverables:
 When you are done, please upload the following:
 - Schema diagram
 - ER diagram including attributes and data types
 - Queries
 - Query result screenshots
 
+  
 ## Instructions
 
-### Part 1: Database Schema Design
-Your client wants your database to manage the following information for a book store:
+# Lab 1: Introduction to SQL with a Star Wars Theme
 
-**Book**
-- `title` -- Title of the book
-- `author` -- Author of the book
-- `publicationYear` -- Year of publication
-- `genre` -- Genre of the book
-- `price` -- Price of the book
+### Star Wars Context:
+In a galaxy divided by war, the Rebel Alliance fights against the oppressive Galactic Empire. The heroes of the Rebellion, Luke Skywalker, Princess Leia, and Han Solo, face off against the dark forces led by Darth Vader and Emperor Palpatine in an epic battle for freedom and justice.
 
-**Customer**
-- `firstName` -- First name of the customer
-- `lastName` -- Last name of the customer
-- `email` -- Email address of the customer
-- `phoneNumber` -- Phone number of the customer
+### Story:
+You have been recruited by the Rebel Alliance as a data specialist. Your initial mission is to organize and structure the intelligence gathered about the Empire, crucial information for Rebel operations. The data includes planets, ships, and key characters, vital for the Rebellion's strategy.
 
-**Order**
-- `orderNumber` -- Order number
-- `orderDate` -- Date of the order
-- `customerID` -- ID of the customer who placed the order
-- `totalAmount` -- Total amount of the order
+### Exercise 1: Create Tables
+**Situation:**
+To store the collected information, you need to create an organized structure. Tables are the foundation for storing data efficiently and in an orderly manner.
 
-**OrderDetail**
-- `orderNumber` -- Order number
-- `bookTitle` -- Title of the book ordered
-- `quantity` -- Quantity of the book ordered
+**Task:**
+Create a database with tables to store information about planets, ships, and key characters, including date, enum, and set data types.
+
+```sql
+CREATE TABLE Planets (
+    planet_id INT PRIMARY KEY,
+    planet_name VARCHAR(50),
+    region VARCHAR(50),
+    population BIGINT,
+    discovered_date DATE
+);
+
+CREATE TABLE Ships (
+    ship_id INT PRIMARY KEY,
+    ship_name VARCHAR(50),
+    ship_type ENUM('Freighter', 'Starfighter', 'Capital Ship'),
+    capacity INT,
+    in_service SET('Rebel Alliance', 'Galactic Empire', 'Independent')
+);
+
+CREATE TABLE Characters (
+    character_id INT PRIMARY KEY,
+    character_name VARCHAR(50),
+    affiliation VARCHAR(50),
+    home_planet VARCHAR(50),
+    birth_date DATE
+);
 
 Create an ER diagram: [dbdiagram](https://dbdiagram.io/home).
 
