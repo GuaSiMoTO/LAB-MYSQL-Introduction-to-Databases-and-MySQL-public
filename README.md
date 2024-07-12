@@ -15,8 +15,7 @@ At Reboot Academy, we aim to equip you with practical skills in managing databas
 - Have MySQL installed.
 - Have MySQL Workbench installed or any other MySQL client.
 
-![image](https://github.com/user-attachments/assets/46a821ea-ac2a-4472-85d2-9a7c55b32598)
-
+![image](intro.gif)
 
 
 ### Story:
