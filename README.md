@@ -15,7 +15,9 @@ At Reboot Academy, we aim to equip you with practical skills in managing databas
 - Have MySQL installed.
 - Have MySQL Workbench installed or any other MySQL client.
 
-![image](https://github.com/user-attachments/assets/3714b7fb-fe11-4aa9-9e10-87afbb8367fa)
+![image](https://github.com/user-attachments/assets/46a821ea-ac2a-4472-85d2-9a7c55b32598)
+
+
 
 ### Story:
 You have been recruited by the Rebel Alliance as a data specialist. Your mission is to design and interact with a MySQL database that meets the needs of the Rebel operations. This database will store crucial intelligence about the Empire and the galaxy, helping the Rebellion strategize and execute their plans.
