@@ -56,7 +56,7 @@ Your client wants your database to manage the following information for a book s
 - `bookTitle` -- Title of the book ordered
 - `quantity` -- Quantity of the book ordered
 
-Create an ER diagram for the above schema and implement it in MySQL.
+Create an ER diagram [dbdiagram](https://dbdiagram.io/home).
 
 ### Part 2: Installing and Connecting to MySQL
 **Connection:**
