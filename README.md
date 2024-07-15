@@ -159,10 +159,14 @@ The Rebel Alliance has gathered vital information about planets, ships, characte
 
 C-3PO, the loyal protocol droid, has been assigned to gather and organize this information, but he needs your expertise in SQL. By helping C-3PO retrieve the necessary data, you will play a vital role in supporting the Rebel Alliance's efforts.
 
-### 5.1 C-3PO needs a complete list of all known planet names to update the Galactic Atlas.
-### 5.2 C-3PO must verify the fleet inventory by retrieving the names and types of all ships in the database.
-### 5.3 C-3PO needs a list of all name characters involved and their affiliation.
-### 5.4 C-3PO is tasked with compiling a report on the leadership structure of the Rebel Alliance and the Galactic Empire. Retrieve the names and ranks of all commanders.
+### 5.1 Complete List of Planet Names
+ C-3PO needs a complete list of all known planet names to update the Galactic Atlas.
+### 5.2 Fleet Inventory
+C-3PO must verify the fleet inventory by retrieving the names and types of all ships in the database.
+### 5.3 Characters and Their Affiliations
+C-3PO needs a list of all name characters involved and their affiliation.
+### 5.4 Leadership Structure Report
+C-3PO is tasked with compiling a report on the leadership structure of the Rebel Alliance and the Galactic Empire. Retrieve the names and ranks of all commanders.
 
 By completing these queries, you will help C-3PO gather the necessary data to assist the Rebel Alliance in their strategic planning and operations against the Galactic Empire. Your contribution is crucial for the success of the Rebellion. May the Force be with you!
 
@@ -172,13 +176,17 @@ By completing these queries, you will help C-3PO gather the necessary data to as
 
 Princess Leia, a key leader of the Rebel Alliance, has identified some outdated and incorrect data in the Rebel Alliance database. She needs your help to update and delete certain records to ensure the accuracy of their intelligence. Your expertise in SQL is crucial for making these necessary changes.
 
-### 6.1 The Millennium Falcon, previously classified as 'Independent', is now officially part of the Rebel Alliance. Update the service status of the first ship in the database to 'Rebel Alliance'.
+### 6.1 Update Ship Status
+The Millennium Falcon, previously classified as 'Independent', is now officially part of the Rebel Alliance. Update the service status of the first ship in the database to 'Rebel Alliance'.
 
-### 6.2 Princess Leia discovered that Darth Vader's affiliation was recorded incorrectly. Update the affiliation of the first character in the database to 'Galactic Empire'.
+### 6.2 Correct Character Affiliation
+Princess Leia discovered that Darth Vader's affiliation was recorded incorrectly. Update the affiliation of the first character in the database to 'Galactic Empire'.
 
-### 6.3 The record of an obsolete mission, "First Death Star Attack", should be deleted from the missions database.
+### 6.3 Delete Obsolete Mission
+The record of an obsolete mission, "First Death Star Attack", should be deleted from the missions database.
 
-### 6.4 Princess Leia has determined that the `Commanders` table should be removed from the current database to secure the information.
+### 6.4 Remove Commanders Table
+ Princess Leia has determined that the `Commanders` table should be removed from the current database to secure the information.
 
 
 ## BONUS - **Advanced Rebelds Queries**
