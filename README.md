@@ -92,7 +92,7 @@ USE my_database;
 2. The table should have the following columns:
    - `commander_id` (Primary Key, Integer)
    - `commander_name` (Variable Character, 50 characters)
-   - `rank` (Variable Character, 20 characters)
+   - `status` (Variable Character, 20 characters)
    - `assigned_mission` (Foreign Key referencing mission_id in Missions table)
 
 
@@ -146,7 +146,7 @@ The Rebel Alliance has gathered vital information about planets, ships, characte
 
 ### Tabla Commanders
 
-| commander_id | commander_name | rank          | assigned_mission |
+| commander_id | commander_name | status          | assigned_mission |
 |--------------|----------------|---------------|------------------|
 | 1            | General Dodonna| General       | 1                |
 | 2            | General Rieekan| General       | 2                |
@@ -166,7 +166,7 @@ C-3PO must verify the fleet inventory by retrieving the names and types of all s
 ### 5.3 Characters and Their Affiliations
 C-3PO needs a list of all name characters involved and their affiliation.
 ### 5.4 Leadership Structure Report
-C-3PO is tasked with compiling a report on the leadership structure of the Rebel Alliance and the Galactic Empire. Retrieve the names and ranks of all commanders.
+C-3PO is tasked with compiling a report on the leadership structure of the Rebel Alliance and the Galactic Empire. Retrieve the names and status of all commanders.
 
 By completing these queries, you will help C-3PO gather the necessary data to assist the Rebel Alliance in their strategic planning and operations against the Galactic Empire. Your contribution is crucial for the success of the Rebellion. May the Force be with you!
 
