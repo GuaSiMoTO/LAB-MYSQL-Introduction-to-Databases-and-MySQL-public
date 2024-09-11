@@ -177,7 +177,7 @@ By completing these queries, you will help C-3PO gather the necessary data to as
 Princess Leia, a key leader of the Rebel Alliance, has identified some outdated and incorrect data in the Rebel Alliance database. She needs your help to update and delete certain records to ensure the accuracy of their intelligence. Your expertise in SQL is crucial for making these necessary changes.
 
 ### 6.1 Update Ship Status
-The Millennium Falcon, previously classified as 'Independent', is now officially part of the Rebel Alliance. Update the service status of the first ship in the database to 'Rebel Alliance'.
+The Millennium Falcon, previously classified as 'Independent', is now officially part of the Rebel Alliance. Update the service status to 'Rebel Alliance'.
 
 ### 6.2 Correct Character Affiliation
 Princess Leia discovered that Darth Vader's affiliation was recorded incorrectly. Update the affiliation to 'Galactic Empire'.
