@@ -180,7 +180,7 @@ Princess Leia, a key leader of the Rebel Alliance, has identified some outdated 
 The Millennium Falcon, previously classified as 'Independent', is now officially part of the Rebel Alliance. Update the service status of the first ship in the database to 'Rebel Alliance'.
 
 ### 6.2 Correct Character Affiliation
-Princess Leia discovered that Darth Vader's affiliation was recorded incorrectly. Update the affiliation of the first character in the database to 'Galactic Empire'.
+Princess Leia discovered that Darth Vader's affiliation was recorded incorrectly. Update the affiliation to 'Galactic Empire'.
 
 ### 6.3 Delete Obsolete Mission
 The record of an obsolete mission, "First Death Star Attack", should be deleted from the missions database.
