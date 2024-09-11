@@ -65,10 +65,10 @@ CREATE TABLE Characters (
     character_name VARCHAR(50),
     affiliation VARCHAR(50),
     home_planet VARCHAR(50),
-    birth_date DATE
+    birth_date VARCHAR(10),
 );
 ```
-Create an ER diagram: [dbdiagram](https://dbdiagram.io/home).
+Create an ER diagram: [dbdiagram](https://dbdiagram.io/hCharome).
 
 ## Iteration 3: Create Tables
 
@@ -93,7 +93,7 @@ USE my_database;
    - `commander_id` (Primary Key, Integer)
    - `commander_name` (Variable Character, 50 characters)
    - `status` (Variable Character, 20 characters)
-   - `assigned_mission` (Foreign Key referencing mission_id in Missions table)
+   - `assigned_mission` (Integer)
 
 
 ## Iteration 4: Insert Data  
