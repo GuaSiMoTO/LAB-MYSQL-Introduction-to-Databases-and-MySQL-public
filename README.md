@@ -82,14 +82,14 @@ USE my_database;
 
 ### 3.4 Add these two new tables  
 
-1. The table should have the following columns:
+1. The table Missions should have the following columns:
    - `mission_id` (Primary Key, Integer)
    - `mission_name` (Variable Character, 50 characters)
    - `start_date` (Date)
    - `end_date` (Date)
    - `status` (Enum: 'Planned', 'Ongoing', 'Completed')
 
-2. The table should have the following columns:
+2. The table Commanders should have the following columns:
    - `commander_id` (Primary Key, Integer)
    - `commander_name` (Variable Character, 50 characters)
    - `status` (Variable Character, 20 characters)
