@@ -68,7 +68,7 @@ CREATE TABLE Characters (
     birth_date VARCHAR(10),
 );
 ```
-Create an ER diagram: [dbdiagram](https://dbdiagram.io/hCharome).
+Create an ER diagram: [dbdiagram](https://dbdiagram.io/home).
 
 ## Iteration 3: Create Tables
 
