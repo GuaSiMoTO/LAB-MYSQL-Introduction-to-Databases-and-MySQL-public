@@ -1,0 +1,149 @@
+-- INICO DEL LAB-MYSQL-Introduction-to-Databases-and-MySQL
+-- 3.1 Create in MySQLWorkbench a database called Rebel_Alliance
+CREATE DATABASE rebel_alliance;
+
+-- 3.2 Selecting the Database
+USE rebel_alliance;
+
+-- 3.3 Add Previous tables : Planets, Ships, Characters
+
+CREATE TABLE Planets (
+    planet_id INT PRIMARY KEY,
+    planet_name VARCHAR(50),
+    region VARCHAR(50),
+    population BIGINT,
+    discovered_date DATE
+);
+
+CREATE TABLE Ships (
+    ship_id INT PRIMARY KEY,
+    ship_name VARCHAR(50),
+    ship_type ENUM('Freighter', 'Starfighter', 'Capital Ship'),
+    capacity INT,
+    in_service SET('Rebel Alliance', 'Galactic Empire', 'Independent')
+);
+
+CREATE TABLE Characters (
+    character_id INT PRIMARY KEY,
+    character_name VARCHAR(50),
+    affiliation VARCHAR(50),
+    home_planet VARCHAR(50),
+    birth_date VARCHAR(10)
+);
+
+-- 3.4 Add these two new tables (Missions, Commanders)
+
+CREATE TABLE Missions (
+	mission_id int primary key,
+    mission_name varchar(50),
+    start_date date,
+    end_date date,
+    status_mission enum('Planned','Ongoing','Completed')
+);
+
+CREATE TABLE Commanders (
+	commander_id int primary key,
+    commander_name varchar(50),
+    status_commander varchar(50),
+    assigned_mission int
+);
+
+
+-- Iteration 4: Insert Data
+
+-- TABLA PLANETS
+
+INSERT INTO Planets (planet_id, planet_name, region,population, discovered_date) VALUES
+(1,'Tatooine','Outer Rim',200000,'1977-05-25'),
+(2,'Alderaan','Core Worlds',2000000000,'1977-05-25'),
+(3,'Hoth','Outer Rim',0, '1980-05-21'),
+(4,'Endor','Outer Rim',30000,'1983-05-25'),
+(5,'Coruscant','Core Worlds',1000000000,'1999-05-19');
+
+-- TABLA SHIPS
+
+INSERT INTO Ships (ship_id, ship_name, ship_type, capacity, in_service) VALUES
+(1,'Millennium Falcon','Freighter',6,'Independent'),
+(2,'X-Wing','Starfighter',1,'Rebel Alliance'),
+(3,'TIE Fighter','Starfighter',1,'Galactic Empire'),
+(4,'Star Destroyer','Capital Ship',47000,'Galactic Empire'),
+(5,'Slave I','Starfighter',1,'Independent');
+
+-- TABLA CHARACTERS
+
+INSERT INTO Characters (character_id, character_name, affiliation, home_planet, birth_date) VALUES
+(1,'Luke Skywalker','Rebel Alliance','Tatooine','19BBY'),
+(2,'Princess Leia','Rebel Alliance','Alderaan','19BBY'),
+(3,'Darth Vader','Uknow','Tatooine','41BBY'),
+(4,'Han Solo','Rebel Alliance','Corellia','29BBY'),
+(5,'Boba Fett','Independent','Kamino','32BBY');
+
+-- TABLA MISSIONS
+
+INSERT INTO Missions (mission_id, mission_name, start_date, end_date, status_mission) VALUES
+(1,'Battle of Yavin','1977-05-25','1977-05-25','Completed'),
+(2,'Assault on Hoth','1980-05-21','1980-05-21','Completed'),
+(3,'Rescue of Han Solo','1983-05-25','1983-05-25','Completed'),
+(4,'Battle of Endor','1983-05-25','1983-05-25','Completed'),
+(5,'First Death Star Attack','1977-05-25','1977-05-25','Completed');
+
+-- TABLA Commanders
+
+INSERT INTO Commanders (commander_id, commander_name, status_commander, assigned_mission) VALUES
+(1,'General Dodonna','General',1),
+(2,'General Rieekan','General',2),
+(3,'Lando Calrissian','General',3),
+(4,'Admiral Ackbar','Admiral',4),
+(5,'Darth Vader','Sith Lord',5);
+
+-- Iteration 5: Assist C-3PO with Critical Data Retrieval
+-- 5.1 Complete List of Planet Names
+
+SELECT planet_name FROM Planets;
+
+-- 5.2 Fleet Inventory
+
+SELECT ship_name, ship_type FROM Ships;
+
+-- 5.3 Characters and Their Affiliations
+
+SELECT character_name,affiliation FROM Characters;
+
+-- 5.4 Leadership Structure Report
+
+SELECT commander_name, status_commander FROM Commanders;
+
+-- Iteration 6: Updating and Deleting outdated Data
+-- 6.1 Update Ship Status
+
+UPDATE Ships SET in_service ='Rebel Alliance' where ship_id =1;
+
+-- 6.2 Correct Character Affiliation
+
+UPDATE Characters SET affiliation ='Galactic Empire' where character_id =3;
+
+-- 6.3 Delete Obsolete Mission
+
+DELETE FROM Missions WHERE mission_id =5;
+
+-- 6.4 Remove Commanders Table
+
+DROP TABLE Commanders;
+
+-- TODOS LOS BONUS - Advanced Rebelds Queries
+
+SELECT * FROM Characters WHERE affiliation='Rebel Alliance'AND birth_date<'20ABY';
+
+SELECT ship_name, capacity FROM Ships WHERE (ship_type='Freighter' OR ship_type='Capital Ship') AND capacity > 1000;
+
+-- ANTES TENGO QUE QUITAR EL MODO SEGURO PARA PODER HACER CAMBIOS SIN USAR LA PRIMARY KEY (planet_id)
+SET SQL_SAFE_UPDATES = 0;
+
+UPDATE Planets SET population = population*1.10 WHERE region ='Core Worlds';
+
+DELETE FROM Ships WHERE in_service ='Rebel Alliance' OR in_service ='Galactic Empire';
+
+-- AHORA VOLVEMOS A ACTIVAR EL MODO SEGURO
+SET SQL_SAFE_UPDATES = 1;
+
+-- FIN!
