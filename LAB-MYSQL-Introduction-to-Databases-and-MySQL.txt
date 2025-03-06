@@ -34,7 +34,7 @@ CREATE TABLE Characters (
 -- 3.4 Add these two new tables (Missions, Commanders)
 
 CREATE TABLE Missions (
-	mission_id int primary key,
+    mission_id int primary key,
     mission_name varchar(50),
     start_date date,
     end_date date,
@@ -42,7 +42,7 @@ CREATE TABLE Missions (
 );
 
 CREATE TABLE Commanders (
-	commander_id int primary key,
+    commander_id int primary key,
     commander_name varchar(50),
     status_commander varchar(50),
     assigned_mission int
